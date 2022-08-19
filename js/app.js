@@ -6,11 +6,16 @@ const loadCountries = () => {
 const countriesResult = countries => {
     const countriesShow = countries.map(country => countryResult(country));
     const container = document.getElementById('countries');
-    container.innerHTML = countriesShow;
+    container.innerHTML = countriesShow.join('');
 }
 const countryResult = country => {
+    console.log(country);
     return `
-    
+    <div class="country">
+        <img src="${country.flags.png}" alt="">
+        <h3>${country.name.common}</h3>
+        <p>${country.capital}</p>
+    </div>
     `;
 }
 
