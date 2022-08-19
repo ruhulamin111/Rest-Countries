@@ -1,13 +1,24 @@
+section {
+    width: 90%;
+    margin: auto;
+}
+
+.title {
+    font-size: 2em;
+    margin: 1em 0;
+    color: darkgreen;
+}
+
 .countries {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 2em;
 }
 
 .country {
     border: 1px solid slateblue;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 2em;
+    padding: 2em;
 
 }
 

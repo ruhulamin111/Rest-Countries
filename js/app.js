@@ -4,7 +4,7 @@ const loadCountries = () => {
         .then(data => countriesResult(data))
 }
 const countriesResult = countries => {
-    const countriesShow = countries.map(country => countryResult(country));
+    const countriesShow = countries.slice(0, 21).map(country => countryResult(country));
     const container = document.getElementById('countries');
     container.innerHTML = countriesShow.join('');
 }
