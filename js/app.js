@@ -8,13 +8,14 @@ const countriesResult = countries => {
     const container = document.getElementById('countries');
     container.innerHTML = countriesShow.join('');
 }
-const countryResult = country => {
-    console.log(country);
+const countryResult = ({ flags, name, capital, area, region }) => {
     return `
     <div class="country">
-        <img src="${country.flags.png}" alt="">
-        <h3>${country.name.common}</h3>
-        <p>${country.capital}</p>
+        <img src="${flags.png}" alt="">
+        <h3>Name: ${name.common}</h3>
+        <p>Capital: ${capital}</p>
+        <p>Area: ${area}</p>
+        <p>Continets: ${region}</p>
     </div>
     `;
 }
